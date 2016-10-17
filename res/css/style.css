@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+span {
+    width: 100%;
+}
+
+.number {
+    font-size: 2em;
+}
+
+.output {
+    padding-bottom: 3.5em;
+}
+
+.outputText {
+    font-size: 5em;
+}
