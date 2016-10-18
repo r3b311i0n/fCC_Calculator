@@ -1,3 +1,6 @@
+var total = 0;
+var clearCheck = false;
+
 function main() {
     iconLoad();
 }
@@ -34,4 +37,251 @@ function iconLoad() {
     }
 }
 
-window.onload(main());
+function appendOperator() {
+    clearCheck = false;
+
+    switch (this.id) {
+        case "add":
+            //noinspection JSJQueryEfficiency
+            if (/\s/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html($(".outputText").html().slice(0, length - 2) + "+ ");
+            }
+            else if (/\d/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + " + ");
+            }
+            break;
+        case "subtract":
+            //noinspection JSJQueryEfficiency
+            if (/\s/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html($(".outputText").html().slice(0, length - 2) + "- ");
+            }
+            //noinspection JSJQueryEfficiency
+            else if (/\d/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + " - ");
+            }
+            break;
+        case "multiply":
+            //noinspection JSJQueryEfficiency
+            if (/\s/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html($(".outputText").html().slice(0, length - 2) + "* ");
+            }
+            //noinspection JSJQueryEfficiency
+            else if (/\d/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + " * ");
+            }
+            break;
+        case "divide":
+            //noinspection JSJQueryEfficiency
+            if (/\s/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html($(".outputText").html().slice(0, length - 2) + "/ ");
+            }
+            //noinspection JSJQueryEfficiency
+            else if (/\d/.test($(".outputText").html().slice(-1))) {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + " / ");
+            }
+            break;
+    }
+}
+
+function enterNumber() {
+    if (clearCheck === true) {
+        $(".outputText").html("");
+    }
+    clearCheck = false;
+
+    switch (this.id) {
+        case "zero":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("0");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "0");
+            }
+            break;
+        case "one":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("1");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "1");
+            }
+            break;
+        case "two":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("2");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "2");
+            }
+            break;
+        case "three":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("3");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "3");
+            }
+            break;
+        case "four":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("4");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "4");
+            }
+            break;
+        case "five":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("5");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "5");
+            }
+            break;
+        case "six":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("6");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "6");
+            }
+            break;
+        case "seven":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("7");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "7");
+            }
+            break;
+        case "eight":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("8");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "8");
+            }
+            break;
+        case "nine":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html("9");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + "9");
+            }
+            break;
+        case "decimal":
+            //noinspection JSJQueryEfficiency
+            if ($(".outputText").html() === "0" || $(".outputText").html() == "fCC Calculator") {
+                $(".outputText").html(".");
+            }
+            else {
+                //noinspection JSJQueryEfficiency
+                let expr = $(".outputText").html();
+                //noinspection JSJQueryEfficiency
+                $(".outputText").html(expr + ".");
+            }
+            break;
+    }
+}
+
+$("#zero").on("click", enterNumber);
+
+$("#one").on("click", enterNumber);
+
+$("#two").on("click", enterNumber);
+
+$("#three").on("click", enterNumber);
+
+$("#four").on("click", enterNumber);
+
+$("#five").on("click", enterNumber);
+
+$("#six").on("click", enterNumber);
+
+$("#seven").on("click", enterNumber);
+
+$("#eight").on("click", enterNumber);
+
+$("#nine").on("click", enterNumber);
+
+$("#decimal").on("click", enterNumber);
+
+$("#add").on("click", appendOperator);
+
+$("#subtract").on("click", appendOperator);
+
+$("#multiply").on("click", appendOperator);
+
+$("#divide").on("click", appendOperator);
+
+$("#eq").on("click", function () {
+    //noinspection JSJQueryEfficiency
+    total = eval($(".outputText").html());
+    //noinspection JSJQueryEfficiency
+    $(".outputText").html(total);
+
+    clearCheck = true;
+});
+
+$("#pwr").on("click", function () {
+    $(".outputText").html("0");
+});
+
+$(window).ready(main());

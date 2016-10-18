@@ -12,6 +12,10 @@ span {
     width: 100%;
 }
 
+.ctrlBtn {
+    width: 100%;
+}
+
 .number {
     font-size: 2em;
 }
@@ -21,5 +25,5 @@ span {
 }
 
 .outputText {
-    font-size: 5em;
+    font-size: 4em;
 }
